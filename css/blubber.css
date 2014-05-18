@@ -1,0 +1,73 @@
+* {
+	font: 12px/18px 'Helvetica',Arial,sans-serif;
+}
+
+#content { 
+	position: absolute;
+	top: 0;
+	right: 50px; 
+	bottom: 0;
+	left: 50px;
+	background: #ee3e64;
+}
+
+#header {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 80px;
+	background: #E3FF64;
+}
+#logo {
+	position: absolute;
+	top: 0px;
+	left: 0px; 
+	height: 80px;
+	width: 100px;
+	background: blue;
+}
+#topCategories {
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	width: 160 px;
+	height: 80px;
+}
+
+#favoriteCategories{
+	position: absolute;
+	top: 0px;
+	left: 260px;
+	right: 0px;
+	height: 80px;
+}
+#leftNavigation {
+	position: absolute;
+	top: 80px;
+	left: 0px;
+	bottom: 20px;
+	width: 100px;
+	background: #E3FF64;
+	
+}
+
+Button.topCategory{
+	margin: 2px,2px;
+	font-size: 20px;
+}
+
+
+Button.topCategory.allTags{
+	/* icon here*/
+}
+
+Button.topCategory.newest{
+	/* icon here*/
+	
+}
+
+Button.favorite{
+	margin: 2px,2px;
+	font-size: 16px;
+}
