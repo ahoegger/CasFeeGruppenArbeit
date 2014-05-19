@@ -20,27 +20,26 @@
 	background: #E3FF64;
 }
 #logo {
-	position: absolute;
 	top: 0px;
 	left: 0px; 
 	height: 80px;
 	width: 100px;
 	background: blue;
+    display: inline-block;
+    margin: 0px;
 }
 #topCategories {
-	position: absolute;
+	/*position: absolute;*/
 	top: 0px;
-	left: 100px;
 	width: 160 px;
 	height: 80px;
+    display: inline;
 }
 
 #favoriteCategories{
-	position: absolute;
 	top: 0px;
-	left: 260px;
-	right: 0px;
 	height: 80px;
+    display: inline;
 }
 #leftNavigation {
 	position: absolute;
