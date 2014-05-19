@@ -1,0 +1,148 @@
+/*
+    This stylesheet defines the necessary styles for the reddit clone
+*/
+
+* {
+	font: 12px/18px 'Helvetica',Arial,sans-serif;
+}
+
+#content { 
+	top: 0;
+	right: 50px; 
+	bottom: 0;
+	left: 50px;
+	background: #ee3e64;
+}
+
+#header {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 80px;
+	background: #E3FF64;
+}
+#logo {
+	top: 0px;
+	left: 0px; 
+	height: 80px;
+    min-width: 200px;
+	background: blue;
+    display: inline-block;
+    margin: 0px;
+}
+
+.top_navigation {
+    width: auto;
+    display: inline-block;
+}
+
+#topCategories {
+	/*position: absolute;*/
+	top: 0px;
+	width: 160px;
+	height: 80px;
+    display: inline;
+}
+
+#favoriteCategories{
+	top: 0px;
+	height: 80px;
+    display: inline;
+}
+
+#localNavigation {
+	background: #E3FF64;
+}
+
+Button.topCategory{
+	margin: 2px,2px;
+	font-size: 20px;
+}
+
+
+Button.topCategory.allTags{
+	/* icon here*/
+}
+
+Button.topCategory.newest{
+	/* icon here*/
+	
+}
+
+Button.favorite{
+	margin: 2px,2px;
+	font-size: 16px;
+}
+
+/* content_body will hold the articles as well as some navigation stuff*/
+.content_body {
+    width: auto;
+    width: 100%;
+    display: block;
+    background-color: #E9DC51;
+
+}
+
+.content_body aside {
+    width: 25%;
+    min-width: 200px;
+    display: inline-block;
+}
+
+/* site_header will hold the, well, header of the site including logo and favorites bar */
+.site_header {
+    width: auto;
+    width: 100%;
+    display: block;
+    border: solid 1px;
+}
+
+/* the following style define the grid layouts available. they contain absolutely NO styling*/
+.container_12 .grid_1 {
+    width:6.333%;
+}
+
+.container_12 .grid_2 {
+    width:14.667%;
+}
+
+.container_12 .grid_3 {
+    width:23.0%;
+}
+
+.container_12 .grid_4 {
+    width:31.333%;
+}
+
+.container_12 .grid_5 {
+    width:39.667%;
+}
+
+.container_12 .grid_6 {
+    width:48.0%;
+}
+
+.container_12 .grid_7 {
+    width:56.333%;
+}
+
+.container_12 .grid_8 {
+    width:64.667%;
+}
+
+.container_12 .grid_9 {
+    width:73.0%;
+}
+
+.container_12 .grid_10 {
+    width:81.333%;
+}
+
+.container_12 .grid_11 {
+    width:89.667%;
+}
+
+.container_12 .grid_12 {
+    width:98.0%;
+}

@@ -1,0 +1,33 @@
+.site_header {
+    background-color: #888888;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.site_logo, .top_navigation, .sidebar, .main_content {
+    height: inherit;
+    padding: 5px;
+    box-sizing:  border-box;
+
+}
+.site_logo {
+    background-color: #E3FF64;
+}
+
+.top_navigation {
+    background-color: #E9DC51;
+}
+
+.sidebar {
+    background-color: #cacaca;
+}
+
+.navigation {
+    background-color: #ee3e64;
+}
+
+.main_content {
+    background-color: #e0e0e0;
+}
