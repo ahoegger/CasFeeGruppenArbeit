@@ -5,7 +5,12 @@
 * {
 	font: 12px/18px 'Helvetica',Arial,sans-serif;
 }
-
+input{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d5eeff;
+}
 #content { 
 	top: 0;
 	right: 50px; 
@@ -15,7 +20,7 @@
 }
 
 #header {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right: 0px;
 	left: 0px;
@@ -26,33 +31,57 @@
 	top: 0px;
 	left: 0px; 
 	height: 80px;
-    min-width: 200px;
+    width: 200px;
 	background: blue;
-    display: inline-block;
     margin: 0px;
 }
 
-.top_navigation {
-    width: auto;
-    display: inline-block;
+#top-navigation {
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    right: 0px;
+    height: 80px;
+    background: brown;
+
 }
 
 #topCategories {
-	/*position: absolute;*/
+    float: left;
+	position: static;
+    overflow: auto;
 	top: 0px;
-	width: 160px;
-	height: 80px;
-    display: inline;
+    left: 0px;
+    height: 80px;
+    width: 30%;
+    min-width: 100px;
+    background: yellow;
 }
 
 #favoriteCategories{
-	top: 0px;
-	height: 80px;
-    display: inline;
+    float: right;
+    position: static;
+    overflow: auto;
+    top: 0px;
+    right: 0px;
+    height: 80px;
+    width: 70%;
+    min-width: 100px;
+    background: green;
 }
 
 #localNavigation {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 200px;
 	background: #E3FF64;
+}
+#search{
+    position: absolute;
+    left: 200px;
+    top: 80px;
+    width: 100%;
 }
 
 Button.topCategory{
@@ -73,6 +102,11 @@ Button.topCategory.newest{
 Button.favorite{
 	margin: 2px,2px;
 	font-size: 16px;
+}
+
+input.search{
+    background: url(icons/magnifier.png) no-repeat;
+    padding-left:20px;
 }
 
 /* content_body will hold the articles as well as some navigation stuff*/
