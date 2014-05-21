@@ -5,6 +5,23 @@
 * {
 	font: 12px/18px 'Helvetica',Arial,sans-serif;
 }
+
+/* favorite navigation */
+.button-navigation {
+    width: 40px;
+    background-color: #d5eeff;
+    display: inline-block;
+    position: absolute;
+}
+
+.favorites-content {
+    width: auto;
+    display: inline-block;
+}
+
+
+
+/* ... */
 input{
     font-size: 16px;
     padding: 5px;
@@ -109,7 +126,7 @@ Button.favorite{
 	font-size: 16px;
 }
 
-input.search{
+input.search {
     background-image:url("icons/magnifier.png");
     background-repeat:no-repeat;
     background-position:left center;

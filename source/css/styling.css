@@ -1,10 +1,21 @@
 .site_header {
     background-color: #888888;
-    height: 100px;
+    height: 200px;
     margin: 0px;
     padding: 0px;
 }
 
+.logo-image {
+    width: 100%;
+    height: auto;
+    min-width: 50px;
+    /* max-width: 150px; */
+}
+
+.button-styled:hover {
+    color: #ee3e64;
+    font-size: 2em;
+}
 
 .site_logo, .top_navigation, .sidebar, .main_content {
     height: inherit;
