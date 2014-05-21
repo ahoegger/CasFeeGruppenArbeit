@@ -46,6 +46,15 @@ input{
 	height: 80px;
 	background: #E3FF64;
 }
+
+#main-content {
+    position: absolute;
+    top: 80px;
+    width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 #logo {
 	top: 0px;
 	left: 0px; 
@@ -97,13 +106,13 @@ input{
 	background: #E3FF64;
 }
 #search{
-    position: absolute;
+    /* position: absolute;
     left: 200px;
-    top: 80px;
+    top: 80px; */
     width: 100%;
     min-height: 60px;
-    align-content:center 20px;
-    text-align: center;
+    /* text-align: center; */
+
 }
 
 Button.topCategory{
@@ -131,6 +140,7 @@ input.search {
     background-repeat:no-repeat;
     background-position:left center;
     padding-left:20px;
+    /* margin-left: -50px; */
 
 }
 
