@@ -50,9 +50,11 @@ input{
 #main-content {
     position: absolute;
     top: 80px;
-    width: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    left: 200px;
+    /* width of main content is 100% minus width of logo spacer */
+    width: calc(100% - 200px);
+    /* margin-left: 10%;
+    margin-right: 10%; */
 }
 
 #logo {
@@ -71,7 +73,6 @@ input{
     right: 0px;
     height: 80px;
     background: brown;
-
 }
 
 #topCategories {
@@ -113,6 +114,119 @@ input{
     min-height: 60px;
     /* text-align: center; */
 
+}
+
+.form-field-label {
+    padding-top: 5px;
+    min-width: 160px;
+}
+
+#share-link {
+    align-content: left;
+}
+
+#share-link-form {
+    width: 70%;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0, auto, 0 , 0;
+}
+
+
+/* article specific */
+
+article {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+}
+
+#articles-row {
+    align-content: center;
+}
+
+.articles {
+    width: 70%;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0, auto, 0 , 0;
+}
+
+.article-voting, .article-image, .article-content {
+    padding: 5px;
+}
+
+.article-voting {
+    width: 40px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    background-color: #AAAAFF;
+}
+
+.article-image {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+
+    background-color: #AAAAAA;
+}
+
+.article-content {
+    width: auto;
+    position: relative;
+}
+
+.article-content h3 {
+    margin-top: 0px;
+
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.article-meta {
+    width: auto;
+}
+
+i.fa span {
+    font-size: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+
+/* generic placements and styles inspired by bootstrap.css */
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.results {
+    width: 100%;
 }
 
 Button.topCategory{

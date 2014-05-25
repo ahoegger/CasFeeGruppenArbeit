@@ -4,6 +4,8 @@
 <head>
     <meta charset='UTF-8'/>
     <link rel="stylesheet" media="screen" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="css/grid.css">
     <title>A title</title>
 </head>
 <body>
@@ -32,11 +34,66 @@
         </div>
     </div>
     <div id="main-content">
-        <div id="search">
-            <input class="search" type="text" name="fname" placeholder="Search…">
+        <div class="row">
+            <div class="column grid-12" id="search">
+                <input class="search" type="text" name="fname" placeholder="Search…">
+            </div>
         </div>
-        <div class="results">
-            <p>go home</p>
+        <div class="row">
+            <div class="column grid-12" id="share-link">
+                <div id="share-link-form" class="form share-link">
+                    <div class="share-url row">
+                        <div class="column grid-3 form-field-label">URL</div>
+                        <input class="grid-9 input-fullsize form-field" type="text" name="url"/>
+                    </div>
+                    <div class="share-title row">
+                        <div class="column grid-3 form-field-label">Title</div>
+                        <input class="grid-9 input-fullsize form-field" type="text" name="title"/>
+                    </div>
+                    <div class="share-description row">
+                        <div class="column grid-3 form-field-label">Description</div>
+                        <input class="grid-6 input-fullsize" type="text" name="description"/>
+                        <input class="grid-2 input-fullsize" type="text" name="image"/>
+                    </div>
+                    <div class="share-tags row">
+                        <div class="column grid-3 form-field-label">Tags</div>
+                        <input class="grid-9 input-fullsize" type="text" name="tags"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- the articles will be all in 1 row with 12 columns width -->
+            <div id="articles-row" class="column grid-12">
+                <section id="articles_section" class="articles">
+                    <!-- Repeat the row and its content for each article -->
+                    <div class="row">
+                        <article>
+                            <div class="column grid-12">
+                                <div class="article-voting pull-left">
+                                    Voting
+                                </div>
+                                <div class="article-image pull-left">
+                                    Image
+                                </div>
+                                <div class="article-content">
+                                    <div class="article-main">
+                                        <h3 class="article-heading">Article heading</h3>
+                                        <p class="article-description">Lorem ipsum</p>
+                                    </div>
+                                    <div class="article_meta">
+                                        <div class="pull-left"><i class="fa fa-tags"><span class="article-tags">tag 1 / tag 2 / tag 3</span></i></div>
+                                        <div class="pull-right"><i class="fa fa-comments-o"><span class="article-comments">comments-popup</span></i></div>
+                                        <div class="pull-right"><i class="fa fa-user"><span class="article-user">user-popup</span></i></div>
+                                        <div class="pull-right"><i class="fa fa-calendar"><span class="article-date">date-popup</span></i></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 
