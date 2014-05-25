@@ -42,14 +42,17 @@
         <div class="row">
             <div class="column grid-12" id="share-link">
                 <div id="share-link-section" class="form share-link">
-                    <form id="share-link-form" action="javascript:submitLink()">
+                    <form id="share-link-form" action="javascript:CASFEE.output.outputArticle(this)">
                         <div class="share-url row">
                             <div class="column grid-3 form-field-label">URL</div>
-                            <input class="grid-9 input-fullsize form-field" type="text" name="url"/>
+                            <label>
+                                <input class="grid-9 input-fullsize form-field" type="text" name="url"
+                                       data-casfee="true"/>
+                            </label>
                         </div>
                         <div class="share-title row">
                             <div class="column grid-3 form-field-label">Title</div>
-                            <input class="grid-9 input-fullsize form-field" type="text" name="title"/>
+                            <input class="grid-9 input-fullsize form-field" type="text" name="title" data-casfee="true"/>
                         </div>
                         <div class="share-description row">
                             <div class="column grid-3 form-field-label">Description</div>
@@ -58,7 +61,7 @@
                         </div>
                         <div class="share-tags row">
                             <div class="column grid-3 form-field-label">Tags</div>
-                            <input class="grid-9 input-fullsize" type="text" name="tags"/>
+                            <input class="grid-9 input-fullsize" type="text" name="tags" data-casfee="hello" data-sl-error-sandwich="1"/>
                         </div>
                         <div class="submit row">
                             <input class="grid-1 input-fullsize pull-right" type="submit" name="submit" title="submit" value="Share">
@@ -101,8 +104,9 @@
             </div>
         </div>
     </div>
-
-
 </div>
+<script type="text/javascript" src="scripts/functions.js"></script>
+<script type="text/javascript" src="scripts/links.js" /></script>
+<script type="text/javascript" src="scripts/output.js" /></script>
 </body>
 </html>
