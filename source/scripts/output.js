@@ -33,7 +33,33 @@ CASFEE.output = (function() {
             return nodeHelper.appendNode(rootNode, "div", "article-content");
         },
         articleContent: function(node, article) {
-            node.innerText = article.title;
+            var innerHtmlMeta,
+                innerHtmlMain,
+                tagsList = "",
+                tagsSize,
+                i;
+            innerHtmlMain = '<div class="article-main">' +
+                '<h3 class="article-heading">' + article.title + '</h3>' +
+                '<p class="article-description">' + article.description + '</p>' +
+                '</div>';
+            if (article.tags !== undefined) {
+                tagsSize = article.tags.length;
+                for (i = 0; i < tagsSize; i++) {
+                    tagsList += article.tags[i];
+                    if(i !== tagsSize) {
+                        tagsList += " / ";
+                    }
+                }
+            } else {
+                tagsList = "";
+            }
+            innerHtmlMeta = '<div class="article_meta">' +
+                '<div class="pull-left"><i class="fa fa-tags"><span class="article-tags">' + tagsList + '</span></i></div>' +
+                '<div class="pull-right"><i class="fa fa-comments-o"><span class="article-comments">comments-popup</span></i></div>' +
+                '<div class="pull-right"><i class="fa fa-user"><span class="article-user">user-popup</span></i></div>' +
+                '<div class="pull-right"><i class="fa fa-calendar"><span class="article-date">date-popup</span></i></div>' +
+                '</div>'
+            node.innerHTML = innerHtmlMain + innerHtmlMeta;
         },
         meta: function(rootNode, article) {
             // TODO print the article

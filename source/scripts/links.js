@@ -24,6 +24,10 @@ CASFEE.links = (function() {
         return input.split(splitCharacter);
     }
 
+    function trimString (str) {
+        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    }
+
     return {
         shareLink: function(sharedLink) {
             // TODO implement adding sharedLink to list of available links
