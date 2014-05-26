@@ -14,12 +14,6 @@
     position: absolute;
 }
 
-.favorites-content {
-    width: auto;
-    display: inline-block;
-}
-
-
 
 /* ... */
 input{
@@ -76,9 +70,9 @@ input{
 }
 
 #topCategories {
-    float: left;
-	position: static;
-    overflow: auto;
+    /*float: left;*/
+	position: absolute;
+    /*overflow: auto;*/
 	top: 0px;
     left: 0px;
     height: 80px;
@@ -88,15 +82,37 @@ input{
 }
 
 #favoriteCategories{
-    float: right;
-    position: static;
-    overflow: auto;
+    position: absolute;
+    /*float: right;*/
+    /*position: static;*/
+    /*overflow: auto;*/
     top: 0px;
     right: 0px;
     height: 80px;
     width: 70%;
     min-width: 100px;
     background: green;
+}
+
+.icon-left{
+    position: absolute;
+    left: 0px;
+    width: 40px;
+    height: 80px;
+
+}
+
+.favorites-content {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+
+}
+.icon-right{
+    position: absolute;
+    right: 0px;
+    width: 40px;
+    height: 80px;
 }
 
 #localNavigation {
@@ -121,8 +137,23 @@ input{
     min-width: 160px;
 }
 
-#share-link {
-    align-content: left;
+/*#share-link {*/
+    /*align-content: left;*/
+/*}*/
+
+#share-link-root{
+    visibility: hidden;
+    opacity: 0;
+}
+.anim-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+.anim-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
 }
 
 #share-link-form {

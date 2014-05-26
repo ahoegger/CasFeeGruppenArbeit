@@ -11,12 +11,12 @@ CASFEE.namespace('CASFEE.links');
 
 /* module pattern, see book "JavaScript Patterns, p. 97f */
 /* module pattern, see book "JavaScript Patterns, p. 97f */
-CASFEE.links = (function() {
+CASFEE.links = (function () {
     var inputTypeHandler = {
-        "string": function(value) {
+        "string": function (value) {
             return value;
         },
-        "string-split": function(value) {
+        "string-split": function (value) {
             return split(value, ",");
         }
     };
@@ -52,18 +52,26 @@ CASFEE.links = (function() {
             window.console.log("Article as json is " + articleJson);
             return articleJson;
         },
-        processArticleForm: function(event) {
+        processArticleForm: function (event) {
             window.console.dir(event);
             event.preventDefault();     // do not really submit
             var articleForm = event.srcElement,
                 newArticleJson;
             newArticleJson = CASFEE.links.formToJson(articleForm);
             CASFEE.output.outputArticle(newArticleJson);
+        },
+
+        toggleVisibleShareLink: function (event) {
+            window.console.dir(event);
+            var shareLinkDiv = document.getElementById("share-link-root");
+            shareLinkDiv.className = "anim-hidden";
         }
     };
 }());
 
-(function() {
+(function () {
     var form = document.getElementById("share-link-form");
-        form.addEventListener("submit", CASFEE.links.processArticleForm, false);
+    form.addEventListener("submit", CASFEE.links.processArticleForm, false);
+    var shareLinkButton = document.getElementById("share-link-button");
+    shareLinkButton.addEventListener("mouseup", CASFEE.links.toggleVisibleShareLink);
 }());
