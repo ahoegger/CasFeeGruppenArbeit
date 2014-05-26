@@ -1,3 +1,4 @@
+/* jshint -W097 */
 "use strict";
 
 /**
@@ -11,17 +12,17 @@ CASFEE.namespace('CASFEE.output');
 /* module pattern, see book "JavaScript Patterns, p. 97f */
 CASFEE.output = (function() {
     var outputMethods = {
-        articleElement: function(rootNode, article) {
+        articleElement: function(rootNode) {
             return nodeHelper.appendNode(rootNode, "article");
         },
-        articleColumnElement: function(rootNode, article) {
+        articleColumnElement: function(rootNode) {
             return nodeHelper.appendNode(rootNode, "div", "column grid-12");
         },
         votingElement: function(rootNode, article) {
             return nodeHelper.appendNode(rootNode, "div", "article-voting pull-left");
         },
         votingContent: function(node, article) {
-            node.innerText = "Vote!";
+            node.innerText = "Vote for " + article.title;
         },
         imageElement: function(rootNode, article) {
             return nodeHelper.appendNode(rootNode, "div", "article-image pull-left");
@@ -58,17 +59,11 @@ CASFEE.output = (function() {
                 '<div class="pull-right"><i class="fa fa-comments-o"><span class="article-comments">comments-popup</span></i></div>' +
                 '<div class="pull-right"><i class="fa fa-user"><span class="article-user">user-popup</span></i></div>' +
                 '<div class="pull-right"><i class="fa fa-calendar"><span class="article-date">date-popup</span></i></div>' +
-                '</div>'
+                '</div>';
             node.innerHTML = innerHtmlMain + innerHtmlMeta;
-        },
-        meta: function(rootNode, article) {
-            // TODO print the article
         }
     };
     var nodeHelper = {
-        findNodeByClass: function(rootNode, className) {
-            // TODO implement
-        },
         appendRowToRow: function(rootNode, classes, idName) {
             return nodeHelper.appendNode(rootNode.parentElement, "div", classes, idName);
         },
@@ -93,8 +88,8 @@ CASFEE.output = (function() {
             articleColumnElement;
         window.console.log("article is " + article);
         newRow = nodeHelper.appendRowToRow(document.getElementById("articles_section").lastElementChild, "row");
-        articleElement = outputMethods.articleElement(newRow, article);
-        articleColumnElement = outputMethods.articleContentElement(articleElement, article);
+        articleElement = outputMethods.articleElement(newRow);
+        articleColumnElement = outputMethods.articleColumnElement(articleElement);
         outputMethods.votingContent(outputMethods.votingElement(articleColumnElement, article), article);
         outputMethods.imageContent(outputMethods.imageElement(articleColumnElement, article), article);
         outputMethods.articleContent(outputMethods.articleContentElement(articleColumnElement, article), article);

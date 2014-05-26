@@ -1,3 +1,4 @@
+/* jshint -W097 */
 "use strict";
 
 /**
@@ -24,14 +25,7 @@ CASFEE.links = (function() {
         return input.split(splitCharacter);
     }
 
-    function trimString (str) {
-        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-    }
-
     return {
-        shareLink: function(sharedLink) {
-            // TODO implement adding sharedLink to list of available links
-        },
         // Function to transform a form into an JSON object
         formToJson: function(submitForm) {
             var elementCounter = submitForm.elements.length,
@@ -41,7 +35,7 @@ CASFEE.links = (function() {
                 dataset,
                 dataIncludeAttribute,
                 dataType;
-            // loop over all form elements and add only thos with data-casfee-include
+            // loop over all form elements and add only those with data-casfee-include
             for (; elementCounter > 0;) {
                 formElement = submitForm[elementCounter-1];
                 window.console.log("Element " + elementCounter + " has name " + formElement.name + " and is of tag type " + formElement.tagName);
