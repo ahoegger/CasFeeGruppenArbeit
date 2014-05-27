@@ -28,12 +28,15 @@
             </div>
             <div id="favoriteCategories">
                 <!-- include a list of favorites with scroll buttons left and right -->
-                <div class="button button-navigation icon-left">left</div>
-                <div class="favorites-content" id="favorite-content">
-                    <div class="favorite-content">dummy1</div>
+                <div class="button button-navigation icon-left"><i class="button-navigation fa fa-arrow-left"></i></div>
+                <div class="favorites-content" id="favorites-content">
+                    <div class="favorite-content">
+                        <img class="delete-icon" src="css/icons/delete.png" alt="Delete"/>
+                        dummy1
+                    </div>
                     <div class="favorite-content">dummy2</div>
                 </div>
-                <div class="button button-navigation icon-right">right</div>
+                <div class="button button-navigation icon-right"><i class="button-navigation fa fa-arrow-right"></i></div>
             </div>
         </div>
     </div>
@@ -41,8 +44,8 @@
         <div class="row">
             <div  id="search">
                 <input class="search" type="text" name="fname" placeholder="Search…">
-                <button class="search-button" id="search-button">search</button>
-                <button class="share-link" id="share-link-button">add</button>
+                <button class="search-button" id="search-button"><i class="button-navigation fa fa-search"></i></button>
+                <button class="share-link" id="share-link-button"><i class="button-navigation fa fa-plus-square"></i></button>
             </div>
         </div>
 

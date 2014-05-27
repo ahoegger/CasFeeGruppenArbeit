@@ -7,13 +7,25 @@
 }
 
 /* favorite navigation */
-.button-navigation {
+div.button-navigation {
     width: 40px;
     background-color: #d5eeff;
     display: inline-block;
     position: absolute;
 }
+i.button-navigation {
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+}
 
+i.button-navigation:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
 
 /* ... */
 input{
@@ -106,8 +118,40 @@ input{
     position: absolute;
     left: 40px;
     right: 40px;
-
+    height: 80px;
 }
+.favorite-content {
+    position: relative;
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    border: 1px solid #d5eeff;
+    border-radius: 3px;
+}
+
+.favorite-content:hover{
+    border: 2px solid #d5eeff;
+    cursor: pointer;
+    margin: 9px;
+}
+.delete-icon{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+.delete-icon:hover{
+    right: 3px;
+    top: 3px;
+}
+/*#favorite-content{*/
+    /*position: relative;*/
+    /*float: left;*/
+    /*display: block;*/
+    /*width:400px;*/
+    /*height: 400px;*/
+    /*white-space: nowrap;*/
+/*}*/
 .icon-right{
     position: absolute;
     right: 0px;
