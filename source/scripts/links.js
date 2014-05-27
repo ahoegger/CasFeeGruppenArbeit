@@ -55,7 +55,7 @@ CASFEE.links = (function () {
         processArticleForm: function (event) {
             window.console.dir(event);
             event.preventDefault();     // do not really submit
-            var articleForm = event.srcElement,
+            var articleForm = event.srcElement ? event.srcElement : event.target,
                 newArticleJson;
             newArticleJson = CASFEE.links.formToJson(articleForm);
             CASFEE.output.outputArticle(newArticleJson);
