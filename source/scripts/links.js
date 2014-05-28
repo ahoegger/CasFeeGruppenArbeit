@@ -63,15 +63,17 @@ CASFEE.links = (function () {
 
         toggleVisibleShareLink: function (event) {
             window.console.dir(event);
-            var shareLinkDiv = document.getElementById("share-link-root");
-            shareLinkDiv.className = "anim-hidden";
+            $('#share').slideToggle(200);
         }
     };
 }());
 
-(function () {
-    var form = document.getElementById("share-link-form");
-    form.addEventListener("submit", CASFEE.links.processArticleForm, false);
-    var shareLinkButton = document.getElementById("share-link-button");
-    shareLinkButton.addEventListener("mouseup", CASFEE.links.toggleVisibleShareLink);
-}());
+$(document).ready(function() {
+    $('#share-link-form').on("submit", CASFEE.links.processArticleForm);
+    $('#share-link-button').click(CASFEE.links.toggleVisibleShareLink);
+    $("#share-link-form").find("input[data-casfee-required='true']")
+        .blur(function() {
+            window.console.log("fsdfklsdj");
+            this.value ? $(this).removeClass('form-error') : $(this).addClass('form-error');
+        });
+});

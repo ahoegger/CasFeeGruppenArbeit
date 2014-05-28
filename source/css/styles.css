@@ -6,6 +6,10 @@
 	font: 12px/18px 'Helvetica',Arial,sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 /* favorite navigation */
 div.button-navigation {
     width: 40px;
@@ -54,13 +58,18 @@ input{
 }
 
 #main-content {
-    position: absolute;
-    top: 80px;
-    left: 200px;
+    position: relative;
+    margin: 80px 0 0 200px ;
+    background-color: #e0e0e0;
+    height: 300px;
     /* width of main content is 100% minus width of logo spacer */
-    width: calc(100% - 200px);
+    /* width: calc(100% - 200px); */
     /* margin-left: 10%;
     margin-right: 10%; */
+}
+
+.form-error {
+    border:1px solid darkred;
 }
 
 #logo {
@@ -172,23 +181,22 @@ input{
     top: 80px; */
     width: 100%;
     min-height: 60px;
-    /* text-align: center; */
-
+    text-align: center;
+    padding: 20px 0;
 }
-
+#share {
+    display: block;
+}
+.form-row {
+    width: auto;
+    padding-top: 5px;
+    clear: both;
+}
 .form-field-label {
     padding-top: 5px;
     min-width: 160px;
 }
 
-/*#share-link {*/
-    /*align-content: left;*/
-/*}*/
-
-#share-link-root{
-    /*visibility: hidden;*/
-    /*opacity: 0;*/
-}
 .anim-visible {
     visibility: visible;
     opacity: 1;
@@ -198,18 +206,10 @@ input{
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 2s, opacity 2s linear;
+    height: 0px;
 }
-
-#share-link-form {
-    width: 70%;
-    min-width: 400px;
-    max-width: 800px;
-    margin: 0, auto, 0 , 0;
-}
-
 
 /* article specific */
-
 article {
     display: inline-block;
     height: auto;
@@ -354,53 +354,4 @@ input.search {
     width: 100%;
     display: block;
     border: solid 1px;
-}
-
-/* the following style define the grid layouts available. they contain absolutely NO styling*/
-.container_12 .grid_1 {
-    width:6.333%;
-}
-
-.container_12 .grid_2 {
-    width:14.667%;
-}
-
-.container_12 .grid_3 {
-    width:23.0%;
-}
-
-.container_12 .grid_4 {
-    width:31.333%;
-}
-
-.container_12 .grid_5 {
-    width:39.667%;
-}
-
-.container_12 .grid_6 {
-    width:48.0%;
-}
-
-.container_12 .grid_7 {
-    width:56.333%;
-}
-
-.container_12 .grid_8 {
-    width:64.667%;
-}
-
-.container_12 .grid_9 {
-    width:73.0%;
-}
-
-.container_12 .grid_10 {
-    width:81.333%;
-}
-
-.container_12 .grid_11 {
-    width:89.667%;
-}
-
-.container_12 .grid_12 {
-    width:98.0%;
 }

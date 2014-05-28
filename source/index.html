@@ -10,10 +10,9 @@
         // declare global namespace variable
         window.CASFEE = {};
     </script>
-    <title>A title</title>
+    <title>A even better title</title>
 </head>
 <body>
-<div id="content">
     <div id="header">
         <!--  logo -->
         <div id="logo">Design a logo</div>
@@ -41,79 +40,77 @@
         </div>
     </div>
     <div id="main-content">
-        <div class="row">
-            <div  id="search">
-                <input class="search" type="text" name="fname" placeholder="Search…">
-                <button class="search-button" id="search-button"><i class="button-navigation fa fa-search"></i></button>
-                <button class="share-link" id="share-link-button"><i class="button-navigation fa fa-plus-square"></i></button>
-            </div>
+        <div id="search">
+            <input class="search" type="text" name="fname" placeholder="Search…">
+            <button class="search-button" id="search-button"><i class="button-navigation fa fa-search"></i></button>
+            <button class="share-link" id="share-link-button"><i class="button-navigation fa fa-plus-square"></i></button>
         </div>
-
-        <div id="share-link-root"> <!--class="row"-->
-            <div class="column grid-12" id="share-link">
-                <div id="share-link-section" class="form share-link anim-visible">
-                    <form id="share-link-form" action="">
-                        <div class="share-url row">
-                            <div class="column grid-3 form-field-label" data-casfee-include="1" data-casfee-type="string">URL</div>
-                            <input class="grid-9 input-fullsize form-field" type="text" name="url" data-casfee-include="true" data-casfee-type="string"/>
-                        </div>
-                        <div class="share-title row">
-                            <div class="column grid-3 form-field-label">Title</div>
-                            <input class="grid-9 input-fullsize form-field" type="text" name="title" data-casfee-include="true" data-casfee-type="string"/>
-                        </div>
-                        <div class="share-description row">
-                            <div class="column grid-3 form-field-label">Description</div>
-                            <input class="grid-6 input-fullsize" type="text" name="description" data-casfee-include="true" data-casfee-type="string"/>
-                            <input class="grid-2 input-fullsize" type="text" name="image" data-casfee-include="true" data-casfee-type="string"/>
-                        </div>
-                        <div class="share-tags row">
-                            <div class="column grid-3 form-field-label">Tags</div>
-                            <input class="grid-9 input-fullsize" type="text" name="tags" data-casfee-include="true" data-casfee-type="string-split"/>
-                        </div>
-                        <div class="submit row">
-                            <input class="grid-1 input-fullsize pull-right" type="submit" name="submit" title="submit" value="Share">
-                        </div>
-                    </form>
+        <div id="share" style="display: none">
+            <form id="share-link-form" action="">
+                <div class="form-row">
+                    <div class="column grid-3 form-field-label" data-casfee-include="1" data-casfee-type="string">URL</div>
+                    <input class="column grid-9 input-fullsize form-field" type="text" name="url" data-casfee-required="true" data-casfee-include="true" data-casfee-type="string"/>
                 </div>
+                <div class="form-row">
+                    <div class="column grid-3 form-field-label">Title</div>
+                    <input class="column grid-9 input-fullsize form-field" type="text" name="title" data-casfee-required="true" data-casfee-include="true" data-casfee-type="string"/>
+                </div>
+                <div class="form-row">
+                    <div class="column grid-3 form-field-label">Description</div>
+                    <input class="column grid-7 input-fullsize" type="text" name="description" data-casfee-required="true" data-casfee-include="true" data-casfee-type="string"/>
+                    <input class="column grid-1 input-fullsize" type="text" name="image" data-casfee-include="true" data-casfee-type="string"/>
+                </div>
+                <div class="form-row">
+                    <div class="column grid-3 form-field-label">Tags</div>
+                    <input class="column grid-9 input-fullsize" type="text" name="tags" data-casfee-required="true" data-casfee-include="true" data-casfee-type="string-split"/>
+                </div>
+                <div class="form-row">
+                    <input class="column grid-1 input-fullsize pull-right" type="submit" name="submit" title="submit" value="Share">
+                </div>
+            </form>
+        </div>
+        <div id="result">
+            <div class="row">
+                <article>
+                    <div class="column grid-12">
+                        <div class="article-voting pull-left">
+                            Voting
+                        </div>
+                        <div class="article-image pull-left">
+                            Image
+                        </div>
+                        <div class="article-content">
+                            <div class="article-main">
+                                <h3 class="article-heading">Article heading</h3>
+                                <p class="article-description">Lorem ipsum</p>
+                            </div>
+                            <div class="article_meta">
+                                <div class="pull-left"><i class="fa fa-tags"><span class="article-tags">tag 1 / tag 2 / tag 3</span></i></div>
+                                <div>I am the other content, </div>
+                                <div class="pull-right"><i class="fa fa-comments-o"><span class="article-comments">comments-popup</span></i></div>
+                                <div class="pull-right"><i class="fa fa-user"><span class="article-user">user-popup</span></i></div>
+                                <div class="pull-right"><i class="fa fa-calendar"><span class="article-date">date-popup</span></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-        <div class="row">
-            <!-- the articles will be all in 1 row with 12 columns width -->
-            <div id="articles-row" class="column grid-12">
-                <section id="articles_section" class="articles">
-                    <!-- Repeat the row and its content for each article -->
-                    <div class="row">
-                        <article>
-                            <div class="column grid-12">
-                                <div class="article-voting pull-left">
-                                    Voting
-                                </div>
-                                <div class="article-image pull-left">
-                                    Image
-                                </div>
-                                <div class="article-content">
-                                    <div class="article-main">
-                                        <h3 class="article-heading">Article heading</h3>
-                                        <p class="article-description">Lorem ipsum</p>
-                                    </div>
-                                    <div class="article_meta">
-                                        <div class="pull-left"><i class="fa fa-tags"><span class="article-tags">tag 1 / tag 2 / tag 3</span></i></div>
-                                        <div>I am the other content, </div>
-                                        <div class="pull-right"><i class="fa fa-comments-o"><span class="article-comments">comments-popup</span></i></div>
-                                        <div class="pull-right"><i class="fa fa-user"><span class="article-user">user-popup</span></i></div>
-                                        <div class="pull-right"><i class="fa fa-calendar"><span class="article-date">date-popup</span></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-            </div>
+        <div>
+            <p>show me</p>
+            <div class="form-row" id="hide-me-inline">This line has this content <span>hide me, make me go away</span> that will be gone.</div>
+            <p>show me</p>
         </div>
     </div>
-</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript" src="scripts/functions.js"></script>
 <script type="text/javascript" src="scripts/links.js" ></script>
 <script type="text/javascript" src="scripts/output.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.console.log("here i am");
+    });
+</script>
 </body>
 </html>
