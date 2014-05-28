@@ -3,12 +3,12 @@ CasFeeGruppenArbeit
 ## Mission ##
 
 ## Done ##
-* Diverse Basisimplementierungen
-** Grundsätzliches Layout
-** Pfeile für Favoriten
-** Search box
-** Hinzufügen eines Links via Form in das HTML (inkl. "Zwischenzustand" als JSON, Tags von Komma in Array
-** Font Awesome icons
+* Diverse Basisimplementierungen:
+    * Grundsätzliches Layout
+    * Pfeile für Favoriten
+    * Search box
+    * Hinzufügen eines Links via Form in das HTML (inkl. "Zwischenzustand" als JSON, Tags von Komma in Array
+    * Font Awesome icons
 
 
 ## TODO ##
@@ -17,10 +17,10 @@ Vieles, insbesondere
 * Bilder zu Links
 * "Add" Toggeln
 * Links:
-** Voten (Icons, Werte)
-** Tooltips für Datum, Autor, Comments
-** Ein, ausblenden von Comments
-** Comments überhaupt :)
+    * Voten (Icons, Werte)
+    * Tooltips für Datum, Autor, Comments
+    * Ein, ausblenden von Comments
+    * Comments überhaupt :)
 * Stabilität im JavaScript
 * Form Validierung, binding der Validators via data-* Attribute
 
