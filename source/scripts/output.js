@@ -18,7 +18,12 @@ CASFEE.output = (function() {
             imageContent,
             articleContent;
         window.console.log("article is " + article);
-        voteContent = '<div class="article-voting pull-left">Voting</div>';
+        voteContent =
+            '<div class="article-voting pull-left">' +
+                '<div class="vote icon-passive icon-activatable position-top"><i class="fa fa-arrow-circle-o-up fa-2x"></i></div>' +
+                '<div class="vote position-center">count</div>' +
+                '<div class="vote icon-passive icon-activatable position-bottom"><i class="fa fa-arrow-circle-o-down fa-2x"></i></div>' +
+            '</div>';
         imageContent = '<div class="article-image pull-left">IMG=' + article.image + '</div>';
         articleContent =
             '<div class="article-content">' +
@@ -26,11 +31,11 @@ CASFEE.output = (function() {
                     '<h3 class="article-heading">' + article.title + '</h3>' +
                     '<p class="article-description">' + article.description + '</p>' +
                 '</div>' +
-                '<div class="article_meta">' +
-                    '<div class="pull-left"><i class="fa fa-tags"><span class="article-tags">' + article.tags.join(' / ') + '</span></i></div>' +
-                    '<div class="pull-right"><i class="fa fa-comments-o"><span class="article-comments">comments-popup</span></i></div>' +
-                    '<div class="pull-right"><i class="fa fa-user"><span class="article-user">user-popup</span></i></div>' +
-                    '<div class="pull-right"><i class="fa fa-calendar"><span class="article-date">date-popup</span></i></div>' +
+                '<div class="article-meta">' +
+                    '<i class="fa fa-tags icon-passive"></i><span class="article-tags icon-spacer">' + article.tags.join(' / ') + '</span>' +
+                    '<i class="fa fa-calendar icon-passive"></i><span class="article-date icon-spacer">date-popup</span>' +
+                    '<i class="fa fa-user icon-passive"></i><span class="article-user icon-spacer">user-popup</span>' +
+                    '<i class="fa fa-comments-o icon-passive"></i><span class="article-comments icon-spacer">comments-popup</span>' +
                 '</div>' +
             '</div>';
         $newRow = $('#result').append('<div class="row"><article><div class="column grid-12">' + voteContent + imageContent + articleContent + '</div></article></div>');

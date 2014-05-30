@@ -60,12 +60,7 @@ input{
 #main-content {
     position: relative;
     margin: 80px 0 0 200px ;
-    background-color: #e0e0e0;
     height: 300px;
-    /* width of main content is 100% minus width of logo spacer */
-    /* width: calc(100% - 200px); */
-    /* margin-left: 10%;
-    margin-right: 10%; */
 }
 
 .form-error {
@@ -224,29 +219,82 @@ article {
     margin: 0, auto, 0 , 0;
 }
 
-.article-voting, .article-image, .article-content {
-    padding: 5px;
+.icon-spacer {
+    margin-left: 7px;
+    margin-right: 20px;
 }
 
 .article-voting {
     width: 40px;
     position: relative;
-    display: inline-block;
+    display: inline;
     overflow: hidden;
+    padding: 0px;
+    text-align: center;
+}
 
-    background-color: #AAAAFF;
+.vote {
+    display: inline-block;
+}
+
+.position-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.position-bottom {
+    position: absolute;
+    bottom: 0;
+    vertical-align: bottom;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.position-center {
+    position: relative;
+    vertical-align: middle;
+    display: block;
+    top: 40px;
+    float: left;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.icon-passive {
+    color: #AAAAAA;
+}
+
+.icon-activatable:hover {
+    color: #666666;
+}
+
+.article-image, .article-voting {
+    height: 100px;
 }
 
 .article-image {
     width: 100px;
-    height: 100px;
     display: inline-block;
-
     background-color: #AAAAAA;
 }
 
+.article-voting, .article-image {
+    display: inline-block;
+    float: left;
+}
+
 .article-content {
+    display: block;
+    padding: 0 30px;
+    margin-left: 140px;
     width: auto;
+    min-height: 100px;
     position: relative;
 }
 
@@ -258,6 +306,9 @@ article {
 }
 
 .article-meta {
+    position: absolute;
+    bottom: 0;
+    display: block;
     width: auto;
 }
 
