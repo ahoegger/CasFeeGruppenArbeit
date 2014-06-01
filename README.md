@@ -13,6 +13,7 @@ CasFeeGruppenArbeit
 
 ## TODO ##
 Vieles, insbesondere
+* Entitäten, Objekte mit "stabiler" API machen (z.B. Article, Comment,...)
 * Gestaltung
 * Bilder zu Links
 * "Add" Toggeln

@@ -48,6 +48,7 @@ CASFEE.links = (function () {
                 }
                 elementCounter = elementCounter - 1;
             }
+            articleObject.submitDate = new Date(Date.now());
             articleJson = JSON.stringify(articleObject);
             window.console.log("Article as json is " + articleJson);
             return articleJson;
@@ -73,7 +74,6 @@ $(document).ready(function() {
     $('#share-link-button').click(CASFEE.links.toggleVisibleShareLink);
     $("#share-link-form").find("input[data-casfee-required='true']")
         .blur(function() {
-            window.console.log("fsdfklsdj");
             this.value ? $(this).removeClass('form-error') : $(this).addClass('form-error');
         });
 });
