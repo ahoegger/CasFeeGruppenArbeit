@@ -101,11 +101,13 @@
         </div>
     </div>
     <div id="main-content">
+        <!-- search -->
         <div id="search">
             <input class="search" type="text" name="fname" placeholder="Search…">
             <button class="search-button" id="search-button"><i class="button-navigation fa fa-search"></i></button>
             <button class="share-link" id="share-link-button"><i class="button-navigation fa fa-plus-square"></i></button>
         </div>
+        <!-- form for sharing an aritcle -->
         <div id="share" style="display: none">
             <form id="share-link-form" action="">
                 <div class="form-row">
@@ -130,9 +132,11 @@
                 </div>
             </form>
         </div>
+        <!-- container for search results -->
         <div id="result">
+            <!-- initial article for UI development, will be removed pretty soon -->
             <div class="row">
-                <article>
+                <article id="dummy" class="no-vertical-padding">
                     <div class="column grid-12">
                         <div class="article-voting pull-left">
                             <div class="vote icon-passive icon-activatable position-top"><i class="fa fa-arrow-circle-o-up fa-2x"></i></div>
@@ -149,13 +153,43 @@
                             </div>
                             <div class="article-meta">
                                 <i class="fa fa-tags icon-passive"></i><span class="article-tags icon-spacer">tag 1 / tag 2 / tag 3</span>
-                                <i class="fa fa-calendar icon-passive"></i><span class="article-date icon-spacer">date-popup</span>
-                                <i class="fa fa-user icon-passive"></i><span class="article-user icon-spacer">user-popup</span>
-                                <i class="fa fa-comments-o icon-passive"></i><span class="article-comments icon-spacer">comments-popup</span>
+                                <i class="fa fa-calendar icon-passive"></i><span class="article-date icon-spacer">submission date</span>
+                                <i class="fa fa-user icon-passive"></i><span class="article-user icon-spacer">user submission</span>
+                                <span data-casfee-onclick="toggleVisible(1234)" <i class="fa fa-comments-o icon-passive"></i><span class="article-comments icon-spacer">number of comments + show/hide</span>
                             </div>
                         </div>
                     </div>
                 </article>
+            </div>
+            <div class="row comments no-vertical-padding">
+                <form>
+                    <div class="form-row">
+                        <input type="text" data-casfee-required="true" class="column grid-11 input-fullsize">
+                        <input type="submit" class="column grid-1" value="Submit">
+                    </div>
+                </form>
+                <div class="column grid-12">
+                    <ul class="fa-ul comments-ul">
+                        <!-- existing comments -->
+                        <li><i class="fa-li fa fa-comment-o icon-passive"></i>
+                            et, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
+                            <div class="comment-meta">
+                                <i class="fa fa-calendar icon-passive"><span class="article-date icon-spacer">submission date</span></i>
+                                <i class="fa fa-user icon-passive"><span class="article-user icon-spacer">user submission</span></i>
+                                <i class="fa icon-passive fa-edit"><span class="article-user icon-spacer">Edit own comment</span></i>
+                                <i class="fa icon-passive fa-ban"><span class="article-user icon-spacer">Delete own comment</span></i>
+                            </div>
+                        </li>
+                        <li><i class="fa-li fa fa-comment-o icon-passive"></i>I think, this sucks
+                            <div class="comment-meta">
+                                <i class="fa fa-calendar icon-passive"><span class="article-date icon-spacer">submission date</span></i>
+                                <i class="fa fa-user icon-passive"><span class="article-user icon-spacer">user submission</span></i>
+                                <i class="fa icon-passive fa-edit"><span class="article-user icon-spacer">Edit own comment</span></i>
+                                <i class="fa icon-passive fa-ban"><span class="article-user icon-spacer">Delete own comment</span></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -164,7 +198,7 @@
 <script type="text/javascript" src="scripts/functions.js"></script>
 <script type="text/javascript" src="scripts/links.js" ></script>
 <script type="text/javascript" src="scripts/output.js" ></script>
-<script type="text/javascript" src="scripts/moment.js" ></script>
+<script type="text/javascript" src="scripts/3rdparty/moment.js" ></script>
 <script type="text/javascript">
     $(document).ready(function() {
         window.console.log("here i am");

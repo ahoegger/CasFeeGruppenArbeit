@@ -49,6 +49,8 @@ CASFEE.links = (function () {
                 }
                 elementCounter = elementCounter - 1;
             }
+            // FIXME: Creation of ID must be done on the backend, but, hey, we don't have one so far
+            articleObject.id = Date.now().valueOf();
             articleObject.submitDate = new Date(Date.now());
             articleJson = JSON.stringify(articleObject);
             window.console.log("Article as json is " + articleJson);
@@ -66,6 +68,14 @@ CASFEE.links = (function () {
         toggleVisibleShareLink: function (event) {
             window.console.dir(event);
             $('#share').slideToggle(200);
+        },
+        
+        /**
+         * This function shows or hides the comments for a given article
+         * @param event
+         */
+        toggleShowComments: function(event) {
+            window.console.dir(event);
         },
 
         favoritesNavigationLeft: function (event){

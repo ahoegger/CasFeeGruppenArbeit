@@ -2,8 +2,14 @@
     This stylesheet defines the necessary styles for the reddit clone
 */
 
-* {
-	font: 12px/18px 'Helvetica',Arial,sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900);
+
+html {
+	font: 12pt 'Roboto', sans-serif;
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -214,20 +220,19 @@ input{
     min-width: 160px;
 }
 
-
+.no-vertical-padding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 /* article specific */
 article {
     display: inline-block;
     height: auto;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    border-top: 1px solid darkgrey;
-    border-bottom: 1px solid darkgrey;
+    background-color: #f0f0f8;
 }
 
 #articles-row {
@@ -284,8 +289,37 @@ article {
     top: 40px;
     float: left;
     width: 100%;
-    height: 100%;
     text-align: center;
+}
+
+.comments {
+    padding: 0px;
+}
+
+.comments-ul {
+    display: block;
+}
+
+.article-meta, .comment-meta {
+    font-size: 0.75em;
+}
+
+.comments-ul li .comment-meta {
+    display: block;
+    overflow: hidden;
+    height: auto;
+    max-height: 0px;
+    transition: all 0.2s ease;
+}
+
+.comments-ul li:hover .comment-meta {
+    display: block;
+    max-height: 200px;
+    transition: all 0.2s ease;
+}
+
+.comments-ul li {
+    margin-bottom: 10px;
 }
 
 .icon-passive {
@@ -320,11 +354,16 @@ article {
     position: relative;
 }
 
-.article-content h3 {
+.article-content h3.article-heading {
     margin-top: 0px;
+    margin-bottom: 3px;
+    font-size: 1em;
+    font-weight: 900;
+}
 
-    font-size: 1.3em;
-    font-weight: bold;
+.article-content p {
+    margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 .article-meta {
@@ -332,6 +371,11 @@ article {
     bottom: 0;
     display: block;
     width: auto;
+}
+
+.comments {
+    width: auto;
+    padding-left: 170px;
 }
 
 i.fa span {

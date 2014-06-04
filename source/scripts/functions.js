@@ -24,3 +24,18 @@ CASFEE.namespace = function (ns_string) {
     }
     return parent;
 };
+
+var CASFEE = CASFEE || {};
+CASFEE.namespace('CASFEE.consts');
+
+CASFEE.constants = (function () {
+    var my_constants = {
+      'ID_PREFIX_SHOW_COMMENTS': 'show-hide-comments-for-article-id-',
+      'ID_PREFIX_COMMENTS': 'comments-for-article-id-'
+    };
+    return {
+        get: function(name) {
+            return my_constants[name];
+        }
+    };
+})();
