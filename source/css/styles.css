@@ -17,18 +17,34 @@ div.button-navigation {
     display: inline-block;
     position: absolute;
 }
-i.button-navigation {
-    height: 100%;
-    width: 100%;
+button.button-navigation {
+    /*height: 100%;*/
+    /*width: 100%;*/
     font-size: 22px;
     color: black;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
-i.button-navigation:hover {
+button.button-navigation:hover {
     font-weight: bold;
-    cursor: pointer;
+}
+
+button.button-navigation:disabled {
+    font-weight: bold;
+    cursor: not-allowed;
+    color: gainsboro;
+
+}
+
+i.button-navigation-disabled{
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    color: gainsboro;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* ... */
@@ -55,6 +71,7 @@ input{
 	left: 0px;
 	height: 80px;
 	background: #E3FF64;
+    z-index: 15;
 }
 
 #main-content {
@@ -123,8 +140,10 @@ input{
     left: 40px;
     right: 40px;
     height: 80px;
+    overflow-x: auto;
 }
 .favorite-content {
+    visibility: inherit;
     position: relative;
     float: left;
     height: 60px;
@@ -132,6 +151,9 @@ input{
     margin: 10px;
     border: 1px solid #d5eeff;
     border-radius: 3px;
+}
+.favorite-text{
+    margin: 20px 5px 0px 5px;
 }
 
 .favorite-content:hover{

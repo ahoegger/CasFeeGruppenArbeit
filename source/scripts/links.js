@@ -12,6 +12,7 @@ CASFEE.namespace('CASFEE.links');
 /* module pattern, see book "JavaScript Patterns, p. 97f */
 /* module pattern, see book "JavaScript Patterns, p. 97f */
 CASFEE.links = (function () {
+    var scrolled=0;
     var inputTypeHandler = {
         "string": function (value) {
             return value;
@@ -65,6 +66,40 @@ CASFEE.links = (function () {
         toggleVisibleShareLink: function (event) {
             window.console.dir(event);
             $('#share').slideToggle(200);
+        },
+
+        favoritesNavigationLeft: function (event){
+            var favoritesContent = $('#favorites-content');
+            var scrollHeight = favoritesContent.prop("scrollHeight");
+            if(scrolled-82 >= 0) {
+                scrolled = scrolled - 82;
+                favoritesContent.animate({
+                    scrollTop: scrolled
+                });
+                // disable button right
+                if (scrolled-82 <= 0) {
+                    $('#favorites-navigation-left').prop('disabled', true);
+                }
+                // ensure button left enabled
+                $('#favorites-navigation-right').prop('disabled', false);
+            }
+        },
+
+        favoritesNavigationRight: function (event){
+            var favoritesContent = $('#favorites-content');
+            var scrollHeight = favoritesContent.prop("scrollHeight");
+            if(scrolled+82 <= scrollHeight) {
+                scrolled = scrolled + 82;
+                favoritesContent.animate({
+                    scrollTop: scrolled
+                });
+                // disable button right
+                if (scrolled+82 >= scrollHeight) {
+                    $('#favorites-navigation-right').prop('disabled', true);
+                }
+                // ensure button left enabled
+                $('#favorites-navigation-left').prop('disabled', false);
+            }
         }
     };
 }());
@@ -76,4 +111,6 @@ $(document).ready(function() {
         .blur(function() {
             this.value ? $(this).removeClass('form-error') : $(this).addClass('form-error');
         });
+    $('#favorites-navigation-left').click(CASFEE.links.favoritesNavigationLeft);
+    $('#favorites-navigation-right').click(CASFEE.links.favoritesNavigationRight);
 });
