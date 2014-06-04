@@ -2,6 +2,13 @@ CasFeeGruppenArbeit
 ===================
 ## Mission ##
 
+## Tools und Frameworks ##
+* jQuery
+* Knockout (binding)
+* CSS Präprozessoren: LESS?
+* Task Runner: Gulp
+* 
+
 ## Done ##
 * Diverse Basisimplementierungen:
     * Grundsätzliches Layout
