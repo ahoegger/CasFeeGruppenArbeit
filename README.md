@@ -4,10 +4,14 @@ CasFeeGruppenArbeit
 
 ## Tools und Frameworks ##
 * jQuery
-* Knockout (binding)
-* CSS Präprozessoren: LESS?
+* Knockout (binding) --> nochmals anschauen
+* CSS Präprozessoren: LESS
 * Task Runner: Gulp
-* 
+* bootstrap
+* font awesome (mit LINK attribut)
+* sonst ein custom font :)
+* mobile first, progressive enhancement
+* bower für library dependency management
 
 ## Done ##
 * Diverse Basisimplementierungen:
