@@ -22,7 +22,7 @@ CasFeeGruppenArbeit TODOs
     * Wissen, welcher node sie sind (wegen aktualisierung)
     * Wissen, wie sie sich zeichnen müssen (i.e. welches Template sie haben)
     * kennen ihren "node" (ode parent node)
-* comments node zum article wird immer gerender; widget weiss, was es machen muss, wenn es keine kommentare hat (oder wenn der user nicht eingeloggt ist, whatever)
+* comments node zum article wird immer gerendert; widget weiss, was es machen muss, wenn es keine kommentare hat (oder wenn der user nicht eingeloggt ist, whatever)
 
 * Model zu view model
     * model sind reine objekte
@@ -35,7 +35,7 @@ CasFeeGruppenArbeit TODOs
         * template repository, jedes widget holt dort das passende layout
         * via regex werden die placeholder ersetzt
         * dann wird der node seinem HTML parent node hinzugefügt und im viewnmodel referenziert
-        * mittels data-* attributen weitere features hinzufügen (oder event listener "hlab hart" setzen im view model
+        * mittels data-* attributen weitere features hinzufügen (oder event listener "halb hart" setzen im view model)
 
 * Behaviour
 
