@@ -24,6 +24,12 @@ CasFeeGruppenArbeit TODOs
     * kennen ihren "node" (ode parent node)
 * comments node zum article wird immer gerendert; widget weiss, was es machen muss, wenn es keine kommentare hat (oder wenn der user nicht eingeloggt ist, whatever)
 
+* Services:
+    * Es gibt eine service registry (library)
+    * Unser Projekt registriert "seine" services (getArticles(),...) in der registry
+    * Unser Projekt holt dann as der service registry seinen service und ruft dort die fachlichen service methoden auf
+    * Lässt sich vielleicht auch für die templates so machen, um das laden der templates zu entkoppeln von handling der templates und es auch verschiedene template quellen geben könnte (z.B. parsen des HTML oder asynchrones laden via AJAX) und unserer App das ganz egal sein kann, woher die templates stammen.
+
 * Model zu view model
     * model sind reine objekte
     * über mixins oder so werden die view models gemacht
